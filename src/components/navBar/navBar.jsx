@@ -1,25 +1,23 @@
 import { Badge, Popover } from 'antd'
 import './navBar.scss'
-import { useState } from 'react'
 
 const contentShop = (
   <div>
     <ul>
-      <li><a href="#" className="content ">Remeras</a></li>
-      <li><a href="#" className="content">Buzos</a></li>
+      <li><a href="#products" className="content ">Remeras</a></li>
+      <li><a href="#products" className="content">Buzos</a></li>
     </ul>
   </div>
 );
 
 const contentColecctions = (
   <div>
-    <a href="#" className="nav-links content">Edicion Limitada</a>
+    <a href="#products" className="nav-links content">Edicion Limitada</a>
   </div>
 );
 
 function NavBar() {
-  const [count, setCount] = useState(2)
-  console.log(setCount)
+  const count = 2
   return (
     <nav>
 
@@ -27,10 +25,10 @@ function NavBar() {
         <div>
           <ul>
             <Popover content={contentShop} title="Productos">
-              <li><a href="#" className="nav-links">Shop</a></li>
+              <li><a href="#products" className="nav-links">Shop</a></li>
             </Popover>
             <Popover content={contentColecctions} title="Coleccion">
-              <li><a href="#" className="nav-links">Otras Colecciones</a></li>
+              <li><a href="#products" className="nav-links">Otras Colecciones</a></li>
             </Popover>
           </ul>
         </div>
@@ -50,8 +48,8 @@ function NavBar() {
             <i className='fas fa-bars bagicon' />
           </label>
           <ul>
-            <li><a href="#" className="nav-links">Shop</a></li>
-            <li><a href="#" className="nav-links">Otras Colecciones</a></li>
+            <li><a href="#products" className="nav-links">Shop</a></li>
+            <li><a href="#products" className="nav-links">Otras Colecciones</a></li>
           </ul>
         </div>
       </div>
